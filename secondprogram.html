@@ -1,0 +1,68 @@
+<html>
+<p>
+2. Write a program that uses at least three ways to create an object variable,array variable
+</p>
+
+
+
+ARRAY 1 : <p id="arr1"></p><br/>
+ARRAY 2 : <p id="arr2"></p>var arr = new array();<br/>
+ARRAY 3 : <p id="arr3">	Creating an array using the result of a match<br>
+		var myRe = /d(b+)(d)/i;
+		var myArray = myRe.exec('cdbBdbsbz');</p><br/>
+
+
+OBJECT 1 : <p id="object1"></p>
+OBJECT 2 : <p id="object2"></p><br/>
+OBJECT 3 : <p id="object3"></p><br/>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+
+		//ARRAY
+		var cricket = ["bat", "ball", "feild"];  //array
+		document.getElementById("arr1").innerHTML = cricket;
+
+		
+		//OBJECT 
+		var obj = {firstName:"Manoj", lastName:"Mahamunkar",skills:"developer"};    // Object
+		document.getElementById("object1").innerHTML ="My Name is " + obj.firstName + " " +obj.lastName;
+		
+		function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+var myFather = new person("Prakash", "Mahamunkar", 50, "black");
+document.getElementById("object2").innerHTML =
+"My father name is"+" "+myFather.firstName+" "+"and thier age is "+ myFather.age ; 
+
+
+// Define a function which will work as a method
+        // Define a function which will work as a method
+         function addPrice(amount){
+            with(this){
+               price = amount;
+            }
+         }
+         
+         function book(title, author){
+            this.title = title;
+            this.author  = author;
+            this.price = 0;
+            this.addPrice = addPrice; // Assign that method as property.
+         }
+
+         var myBook = new book("Perl", "Mohtashim");
+         myBook.addPrice(100);
+         
+         document.write("Book title is : " + myBook.title + "<br>");
+         document.write("Book author is : " + myBook.author + "<br>");
+         document.write("Book price is : " + myBook.price + "<br>");
+
+
+
+
+	 </script>

@@ -1,0 +1,38 @@
+<html>
+	<p>
+		1. Write a program to create variables of the following types:        int        string        boolean        object        array    then add values in array(can be value of any type). Delete values from the array using array built in methods.     Toggle values of boolean variables    Concatenate string with more values(without creating new string variables)
+	</p>
+	ARRAY VALUES <p id="demo"></p>
+	<p id="Stringval"></p>
+	<button onclick="callBol();">CLICK TO TOGGLE Boolean</button><br/>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		var length = 16;                               // Number
+		var Name = "MANOJ";								// String
+		var booleanval = true;                      // Boolean
+		var obj = {firstName:"Manoj", lastName:"Mahamunkar"};    // Object
+		var cricket = ["bat", "ball", "feild"];  //array
+		cricket.push("Batsman"); 
+		document.getElementById("demo").innerHTML = cricket.toString();
+		//Add value in array
+		 var str1 = Name.concat(" ( New string added to MANOJ )");
+ 		document.getElementById("Stringval").innerHTML = str1;
+
+			function callBol()
+			{
+			var booleanval = true;
+
+			alert(booleanval);     // true
+
+			booleanval = ! booleanval;
+			alert(booleanval);     // false
+
+			booleanval = ! booleanval;
+			alert(booleanval);     // true
+			}
+
+
+	 </script>
+</html>
+
